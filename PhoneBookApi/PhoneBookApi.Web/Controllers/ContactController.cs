@@ -34,10 +34,9 @@ namespace PhoneBookApi.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Contact> Create([FromBody]JObject data)
+        public ActionResult<Contact> Create(Contact contactToAdd)
         {
-            var name = data["name"].ToString();
-            var createdContact = _contactRepository.Create(new Contact(name));
+            var createdContact = _contactRepository.Create(contactToAdd);
             if (createdContact == null)
                 return BadRequest();
 
