@@ -3,6 +3,7 @@ using PhoneBookMobile.Util;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using PhoneBookMobile.Services;
 
 namespace PhoneBookMobile
 {
@@ -29,7 +30,8 @@ namespace PhoneBookMobile
 
         private async void TestRequest()
         {
-            var contacts = await ApiHelper.GetAllContacts();
+            var contactService = new ContactService();
+            var contacts = await contactService.GetAllContacts();
         }
     }
 }
