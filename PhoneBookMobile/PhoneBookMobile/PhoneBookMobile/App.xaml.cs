@@ -1,4 +1,5 @@
 ﻿using PhoneBookMobile.Views;
+using PhoneBookMobile.Util;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,7 +11,7 @@ namespace PhoneBookMobile
         public App()
         {
             InitializeComponent();
-
+            TestRequest();
             MainPage = new PhonebookView();
         }
 
@@ -24,6 +25,11 @@ namespace PhoneBookMobile
 
         protected override void OnResume()
         {
+        }
+
+        private async void TestRequest()
+        {
+            var contacts = await ApiHelper.GetAllContacts();
         }
     }
 }
