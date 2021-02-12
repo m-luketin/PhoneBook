@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBookMobile.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace PhoneBookMobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new PhonebookView();
         }
 
         protected override void OnStart()
