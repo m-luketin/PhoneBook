@@ -1,19 +1,17 @@
-﻿using Newtonsoft.Json;
-using PhoneBookMobile.Models;
+﻿using PhoneBookMobile.Models;
 using PhoneBookMobile.Util;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PhoneBookMobile.Services
 {
-    public class ContactService
+    public class PhoneNumberService
     {
-        private const string endpointUrl = "api/contact/";
+        private const string endpointUrl = "api/phone-number/";
 
-        public async Task<List<Contact>> GetAllContacts()
+        public async Task<List<PhoneNumber>> GetAllPhoneNumbers()
         {
             try
             {
@@ -21,7 +19,7 @@ namespace PhoneBookMobile.Services
                 if (!responseMessage.IsSuccessStatusCode)
                     return null;
 
-                return await JsonHelper.Deserialize<List<Contact>>(responseMessage);
+                return await JsonHelper.Deserialize<List<PhoneNumber>>(responseMessage);
             }
             catch (Exception ex)
             {
@@ -29,7 +27,7 @@ namespace PhoneBookMobile.Services
             }
         }
 
-        public async Task<Contact> GetContactById(int id)
+        public async Task<PhoneNumber> GetPhoneNumberById(int id)
         {
             try
             {
@@ -37,7 +35,7 @@ namespace PhoneBookMobile.Services
                 if (!responseMessage.IsSuccessStatusCode)
                     return null;
 
-                return await JsonHelper.Deserialize<Contact>(responseMessage); 
+                return await JsonHelper.Deserialize<PhoneNumber>(responseMessage);
             }
             catch (Exception ex)
             {
@@ -45,17 +43,17 @@ namespace PhoneBookMobile.Services
             }
         }
 
-        public async Task<Contact> CreateContact(Contact contactToCreate)
+        public async Task<PhoneNumber> CreatePhoneNumber(PhoneNumber phoneNumberToCreate)
         {
             try
             {
-                var serializedContent = await JsonHelper.SerializeAndEncode(contactToCreate);
+                var serializedContent = await JsonHelper.SerializeAndEncode(phoneNumberToCreate);
 
                 var responseMessage = await ApiHelper.HttpClient.PostAsync($"{ApiHelper.BaseUrl}{endpointUrl}", serializedContent);
                 if (!responseMessage.IsSuccessStatusCode)
                     return null;
 
-                return await JsonHelper.Deserialize<Contact>(responseMessage);
+                return await JsonHelper.Deserialize<PhoneNumber>(responseMessage);
             }
             catch (Exception ex)
             {
@@ -63,22 +61,22 @@ namespace PhoneBookMobile.Services
             }
         }
 
-        public async Task<bool> DeleteContact(int id)
+        public async Task<bool> DeletePhoneNumber(int id)
         {
             var responseMessage = await ApiHelper.HttpClient.DeleteAsync($"{ApiHelper.BaseUrl}{endpointUrl}/{id}");
 
             return !responseMessage.IsSuccessStatusCode;
         }
 
-        public async Task<Contact> UpdateContact(Contact contactToUpdate)
+        public async Task<PhoneNumber> UpdatePhoneNumber(PhoneNumber phoneNumberToUpdate)
         {
-            var serializedContent = await JsonHelper.SerializeAndEncode(contactToUpdate);
+            var serializedContent = await JsonHelper.SerializeAndEncode(phoneNumberToUpdate);
 
             var responseMessage = await ApiHelper.HttpClient.PutAsync($"{ApiHelper.BaseUrl}{endpointUrl}", serializedContent);
             if (!responseMessage.IsSuccessStatusCode)
                 return null;
 
-            return await JsonHelper.Deserialize<Contact>(responseMessage);
+            return await JsonHelper.Deserialize<PhoneNumber>(responseMessage);
         }
     }
 }
