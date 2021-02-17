@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace PhoneBookApi.Data.Entities.Models
 {
@@ -13,6 +14,6 @@ namespace PhoneBookApi.Data.Entities.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public ICollection<PhoneNumber> PhoneNumbers { get; set; }
+        public List<PhoneNumber> PhoneNumbers { get; set; }
     }
 }
