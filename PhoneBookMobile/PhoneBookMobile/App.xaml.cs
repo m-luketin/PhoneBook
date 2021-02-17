@@ -1,3 +1,5 @@
+using PhoneBookMobile.Interfaces.Services;
+using PhoneBookMobile.Services;
 using PhoneBookMobile.ViewModels;
 using PhoneBookMobile.Views;
 using Prism;
@@ -28,6 +30,9 @@ namespace PhoneBookMobile
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+
+            containerRegistry.Register<IContactService, ContactService>();
+            containerRegistry.Register<IPhoneNumberService, PhoneNumberService>();
         }
     }
 }
