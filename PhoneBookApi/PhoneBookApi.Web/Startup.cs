@@ -31,7 +31,9 @@ namespace PhoneBookApi.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers()
+                .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "PhoneBookApi.Web", Version = "v1" });
@@ -42,6 +44,8 @@ namespace PhoneBookApi.Web
 
             services.AddScoped<IContactRepository, ContactRepository>();
             services.AddScoped<IPhoneNumberRepository, PhoneNumberRepository>();
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

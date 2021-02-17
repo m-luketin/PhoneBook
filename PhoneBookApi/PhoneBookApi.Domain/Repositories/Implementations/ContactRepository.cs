@@ -58,7 +58,10 @@ namespace PhoneBookApi.Domain.Repositories.Implementations
 
         public Contact GetById(int id)
         {
-            return _context.Contacts.Find(id);
+            var contactToGet = _context.Contacts.Include(c => c.PhoneNumbers)
+                                                .FirstOrDefault(c => c.Id == id);
+
+            return contactToGet;
         }
     }
 }
