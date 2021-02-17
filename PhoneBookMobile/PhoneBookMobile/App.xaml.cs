@@ -30,6 +30,7 @@ namespace PhoneBookMobile
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<ContactDetailsPage, ContactDetailsPageViewModel>();
 
             containerRegistry.Register<IContactService, ContactService>();
             containerRegistry.Register<IPhoneNumberService, PhoneNumberService>();

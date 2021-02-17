@@ -4,10 +4,11 @@ using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace PhoneBookMobile.ViewModels
 {
-    public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
+    public class ViewModelBase : BindableBase, IInitialize, IInitializeAsync, INavigationAware, IDestructible
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -24,6 +25,11 @@ namespace PhoneBookMobile.ViewModels
         }
 
         public virtual void Initialize(INavigationParameters parameters)
+        {
+
+        }
+
+        public virtual async Task InitializeAsync(INavigationParameters parameters)
         {
 
         }

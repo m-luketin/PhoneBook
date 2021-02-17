@@ -1,11 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:prism="http://prismlibrary.com"
              x:Class="PhoneBookMobile.Views.MainPage"
              Title="{Binding Title}">
-
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
-
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <ListView x:Name="ContactList" ItemsSource="{Binding Contacts}">
+                <ListView.Behaviors>
+                    <prism:EventToCommandBehavior EventName="ItemTapped"
+                                          Command="{Binding ContactDetailsCommand}"
+                                          CommandParameter="{Binding Id}" /> <!-- Binding Contact.Id? -->
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <FlexLayout Margin="20,5" JustifyContent="SpaceBetween" AlignItems="Center">
+                                <Label Text="{Binding Name}" TextColor="Black" FontSize="20"/>
+                                <Image Source="default_user.png"/>
+                            </FlexLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
