@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace PhonebookMobile.iOS
+namespace PhoneBookMobile.iOS
 {
     public class Application
     {

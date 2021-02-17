@@ -2,7 +2,7 @@ using Android.App;
 using Android.Content;
 using AndroidX.AppCompat.App;
 
-namespace PhonebookMobile.Droid
+namespace PhoneBookMobile.Droid
 {
     [Activity(Theme = "@style/MainTheme.Splash",
               MainLauncher = true,

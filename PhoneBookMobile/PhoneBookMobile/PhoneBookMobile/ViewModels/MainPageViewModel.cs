@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PhonebookMobile.ViewModels
+namespace PhoneBookMobile.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {

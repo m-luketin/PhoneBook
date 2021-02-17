@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
         <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{48362B88-CBF3-4118-855A-D0A719BE54C1}</ProjectGuid>
+    <ProjectGuid>{6CAF851C-859D-4AD8-BC3C-C7D26017D63A}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PhonebookMobile.iOS</RootNamespace>
+    <RootNamespace>PhoneBookMobile.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>PhonebookMobile.iOS</AssemblyName>
+    <AssemblyName>PhoneBookMobile.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -203,9 +203,9 @@
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PhonebookMobile\PhonebookMobile.csproj">
+    <ProjectReference Include="..\PhoneBookMobile\PhoneBookMobile.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
-      <Name>PhonebookMobile</Name>
+      <Name>PhoneBookMobile</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

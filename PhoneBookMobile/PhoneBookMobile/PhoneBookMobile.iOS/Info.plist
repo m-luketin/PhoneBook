@@ -27,9 +27,9 @@
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
     <key>CFBundleDisplayName</key>
-    <string>PhonebookMobile</string>
+    <string>PhoneBookMobile</string>
     <key>CFBundleName</key>
-    <string>PhonebookMobile</string>
+    <string>PhoneBookMobile</string>
     <key>CFBundleIdentifier</key>
     <string>com.companyname.appname</string>
     <key>CFBundleVersion</key>

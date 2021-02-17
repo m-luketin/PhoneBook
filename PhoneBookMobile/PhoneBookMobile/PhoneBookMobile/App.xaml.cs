@@ -1,12 +1,12 @@
-using PhonebookMobile.ViewModels;
-using PhonebookMobile.Views;
+using PhoneBookMobile.ViewModels;
+using PhoneBookMobile.Views;
 using Prism;
 using Prism.Ioc;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 
-namespace PhonebookMobile
+namespace PhoneBookMobile
 {
     public partial class App
     {

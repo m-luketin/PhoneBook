@@ -4,7 +4,7 @@ using Android.OS;
 using Prism;
 using Prism.Ioc;
 
-namespace PhonebookMobile.Droid
+namespace PhoneBookMobile.Droid
 {
     [Activity(Theme = "@style/MainTheme",
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]

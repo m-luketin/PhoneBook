@@ -2,7 +2,7 @@ using System;
 using Android.App;
 using Android.Runtime;
 
-namespace PhonebookMobile.Droid
+namespace PhoneBookMobile.Droid
 {
     [Application(
         Theme = "@style/MainTheme"

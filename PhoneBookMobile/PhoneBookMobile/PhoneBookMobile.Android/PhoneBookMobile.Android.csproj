@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9127B3C2-0861-4F19-97EE-B8DF8C4436A7}</ProjectGuid>
+    <ProjectGuid>{D689CBD6-C528-4FFF-974A-16B5826720E0}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PhonebookMobile.Droid</RootNamespace>
-    <AssemblyName>PhonebookMobile.Android</AssemblyName>
+    <RootNamespace>PhoneBookMobile.Droid</RootNamespace>
+    <AssemblyName>PhoneBookMobile.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
@@ -107,9 +107,9 @@
     <AndroidResource Include="Resources\values\strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PhonebookMobile\PhonebookMobile.csproj">
+    <ProjectReference Include="..\PhoneBookMobile\PhoneBookMobile.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
-      <Name>PhonebookMobile</Name>
+      <Name>PhoneBookMobile</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

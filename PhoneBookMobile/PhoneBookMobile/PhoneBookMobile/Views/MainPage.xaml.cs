@@ -1,5 +1,5 @@
 ﻿
-namespace PhonebookMobile.Views
+namespace PhoneBookMobile.Views
 {
     public partial class MainPage
     {
